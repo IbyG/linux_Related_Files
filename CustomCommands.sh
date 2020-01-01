@@ -58,5 +58,39 @@ c(){
 
 }
 
+#creating a python programme
+py(){
+        #checking if arguments have been given
+        if ["$1" == ""]; then
+                echo "No arguments given"
+                echo "E.G. p filename OR p filename.py"
+                return
+        fi
+
+        #removing the extension
+        name=$(echo "$1" | cut -f 1 -d '.')
+
+        #create python file
+        touch $name.py
+
+
+        echo "#FileName: $name BY: Ibrahim George" >> $name.py
+        echo -n "#Date: ">>$name.py
+        date '+%A, %B %-d %Y' >> $name.py
+
+
+        echo -e "\ndef main(): \n\nmain()">>$name.py
+
+
+
+        #opening c file
+        vim $name.py
+
+
+
+}
+
+
+
 
 startup
