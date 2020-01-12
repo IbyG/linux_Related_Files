@@ -86,8 +86,19 @@ py(){
         #opening c file
         vim $name.py
 
+}
 
 
+# Typing `serve` with no arguments will start the PHP inbuilt
+# server, listening on port 8000.
+# If you provide an argument, that is assumed to be the port
+# on which to listen.
+function serve() {
+	if [ $# -eq 0 ]; then
+		php -S localhost:8000
+	else
+		php -S localhost:"$@"
+	fi
 }
 
 
