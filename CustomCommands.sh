@@ -102,6 +102,10 @@ function serve() {
 }
 
 
+#shortening the url in the terminal
+#PS1='\u@\h: \W:\$'
 
+#Aliases list
+alias edex="./.linux_Related_Files/EDEX/eDEX-UI.Linux.x86_64.AppImage"
 
 startup
